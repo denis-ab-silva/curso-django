@@ -6,7 +6,7 @@ from receitas.models import Receita
 # from .models import usuarios
 
 def cadastro(request):
-    
+    """ Cadastra uma nova pessoa no sistema """
     if request.method == 'POST':
         nome = request.POST['nome']
         email = request.POST['email']
@@ -42,7 +42,7 @@ def cadastro(request):
         return render(request, 'usuarios/cadastro.html')
 
 def login(request):
-    
+    """ Realiza o login de uma pessoa no sistema """
     if request.method == 'POST':
         email = request.POST['email']
         senha = request.POST['senha']
